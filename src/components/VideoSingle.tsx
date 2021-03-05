@@ -29,21 +29,27 @@ const VideoSingle: React.FC<VideoSingleProps> = ({
 }) => {
   return (
     <Container>
-      <div className="video-info">
-        <img src={preview} alt="thumbnail" />
-        <strong>LIVE</strong>
-        <p>{`${formatNumber(viewers)} viewers`}</p>
-      </div>
-      <div className="profile-info">
-        <img src={avatar} alt="Profile" />
-        <div>
-          <strong title={title}>{title}</strong>
-          <p>{channel}</p>
-          {tags.map((tag) => (
-            <span>{tag}</span>
-          ))}
+      <a
+        href={`https://twitch.tv/${channel}`}
+        target="_blank"
+        rel="noopener nofollow"
+      >
+        <div className="video-info">
+          <img src={preview} alt="thumbnail" />
+          <strong>LIVE</strong>
+          <p>{`${formatNumber(viewers)} viewers`}</p>
         </div>
-      </div>
+        <div className="profile-info">
+          <img src={avatar} alt="Profile" />
+          <div>
+            <strong title={title}>{title}</strong>
+            <p>{channel}</p>
+            {tags.map((tag) => (
+              <span>{tag}</span>
+            ))}
+          </div>
+        </div>
+      </a>
     </Container>
   );
 };

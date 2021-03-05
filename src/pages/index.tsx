@@ -9,7 +9,7 @@ const Home: React.FC = () => {
   return (
     <Container>
       <Head>
-        <title>Homepage</title>
+        <title>Twitch Clone</title>
       </Head>
 
       <Header />

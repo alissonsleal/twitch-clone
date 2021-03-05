@@ -75,4 +75,15 @@ export const Container = styled.div`
       }
     }
   }
+
+  :hover {
+    .video-info {
+      img,
+      strong,
+      p {
+        transform: translate(7px, -5px);
+      }
+      background-color: #f33;
+    }
+  }
 `;
