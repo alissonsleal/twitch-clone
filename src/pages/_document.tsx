@@ -50,6 +50,21 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
           <link rel="icon" href="/favicon.svg" />
+          <meta
+            name="keywords"
+            content="twitch, online video, live streams, live, streamers, livestreamers, livestream, channels, esports, "
+          />
+          <meta name="theme-color" content="#6441A4" />
+          <meta
+            name="description"
+            lang="en-US"
+            content="Twitch is the world's leading video platform and community for gamers."
+          />
+          <meta
+            property="image"
+            content="https://static-cdn.jtvnw.net/ttv-static-metadata/twitch_logo3.jpg"
+          />
+          <meta property="url" content="https://twitchclone.vercel.app/" />
         </Head>
         <body>
           <Main />

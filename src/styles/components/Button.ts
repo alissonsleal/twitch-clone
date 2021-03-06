@@ -6,7 +6,7 @@ interface ButtonProps {
 }
 
 export const Container = styled.button<ButtonProps>`
-  color: #fafafa;
+  color: #fff;
   font-weight: bold;
   padding: 0.5rem;
   margin: 0 0.5rem;
@@ -18,9 +18,10 @@ export const Container = styled.button<ButtonProps>`
   ${(props) =>
     props.buttonType === 'primary'
       ? css`
-          background-color: #9147ff;
+          background-color: var(--primary);
+
           :hover {
-            background-color: ${darken(0.1, '#9147ff')};
+            background-color: ${darken(0.1, 'rgb(145, 71, 255)')};
           }
         `
       : css`

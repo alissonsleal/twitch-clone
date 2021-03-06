@@ -24,6 +24,17 @@ const Main = () => {
     setData(response.data.streams);
   }
 
+  if (!data) {
+    return (
+      <Container>
+        <div className="loading-container">
+          <h1>Twitch Clone</h1>
+          <div className="loading"></div>
+        </div>
+      </Container>
+    );
+  }
+
   return (
     <Container>
       <VideoCarousel data={data} />

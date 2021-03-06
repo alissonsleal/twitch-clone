@@ -54,6 +54,11 @@ export const MiddleMenu = styled.div`
     background-color: #29292b;
     width: 100%;
 
+    label[for='search'] {
+      position: absolute;
+      top: -2000px;
+    }
+
     input {
       height: 36px;
       width: 100%;

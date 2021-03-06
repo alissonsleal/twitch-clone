@@ -24,7 +24,10 @@ const Header: React.FC = () => {
       </LeftMenu>
       <MiddleMenu>
         <div>
-          <input type="text" placeholder="Search" />
+          <input id="search" type="text" placeholder="Search" />
+          <label aria-label="search" htmlFor="search">
+            Search
+          </label>
           <FaSearch size={16} />
         </div>
       </MiddleMenu>

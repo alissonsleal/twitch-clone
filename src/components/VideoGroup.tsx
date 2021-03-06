@@ -36,7 +36,7 @@ const VideoGroup: React.FC<VideoGroupProps> = ({ data }) => {
               channel={stream.channel.display_name}
               tags={['English']}
               avatar={stream.channel.logo}
-              preview={stream.preview.medium}
+              preview={stream.preview.large}
               viewers={stream.viewers}
             />
           ))}
