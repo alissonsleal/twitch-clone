@@ -1,16 +1,17 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { Container } from '../styles/components/Main';
-import VideoGroup from './VideoGroup';
+import VideoCarousel from './VideoCarousel';
+import VideoGroup, { DataProps } from './VideoGroup';
 
 const Main = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState<DataProps[]>();
   useEffect(() => {
     getData();
   }, []);
   async function getData() {
     const response = await axios.get(
-      `https://twitch-cors.herokuapp.com/https://api.twitch.tv/kraken/streams?limit=4&offset=${Math.floor(
+      `https://api.twitch.tv/kraken/streams?limit=4&offset=${Math.floor(
         Math.random() * 100,
       )}`,
       {
@@ -25,7 +26,7 @@ const Main = () => {
 
   return (
     <Container>
-      {console.log(data)}
+      <VideoCarousel data={data} />
       <VideoGroup data={data} />
       <VideoGroup data={data} />
       <VideoGroup data={data} />

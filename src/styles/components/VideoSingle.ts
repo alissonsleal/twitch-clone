@@ -4,13 +4,17 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 10px;
-  max-width: 300px;
 
   .video-info {
     display: flex;
     flex-direction: column;
     background-color: red;
     position: relative;
+    width: 100%;
+
+    img {
+      width: 100%;
+    }
 
     strong {
       position: absolute;

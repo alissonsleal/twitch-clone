@@ -1,0 +1,15 @@
+{
+  "short_name": "Twitch",
+  "name": "Twitch Clone",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "display": "fullscreen",
+  "orientation": "portrait",
+  "background_color": "#0b0b0d",
+  "theme_color": "#6441A4"
+}

@@ -44,8 +44,8 @@ const VideoSingle: React.FC<VideoSingleProps> = ({
           <div>
             <strong title={title}>{title}</strong>
             <p>{channel}</p>
-            {tags.map((tag) => (
-              <span>{tag}</span>
+            {tags.map((tag, index) => (
+              <span key={index}>{tag}</span>
             ))}
           </div>
         </div>

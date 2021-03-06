@@ -1,11 +1,12 @@
 import { Container } from '../styles/components/VideoGroup';
 import VideoSingle from './VideoSingle';
 
-interface VideoGroupProps {
+export interface VideoGroupProps {
   data?: DataProps[];
 }
 
-interface DataProps {
+export interface DataProps {
+  _id: number;
   viewers: number;
   channel: {
     status: string;
@@ -15,10 +16,14 @@ interface DataProps {
   };
   preview: {
     medium: string;
+    large: string;
   };
 }
 
 const VideoGroup: React.FC<VideoGroupProps> = ({ data }) => {
+  if (!data) {
+    return <h1>Loading Twitch Clone...</h1>;
+  }
   return (
     <Container>
       <strong>Recommended channels</strong>
@@ -26,6 +31,7 @@ const VideoGroup: React.FC<VideoGroupProps> = ({ data }) => {
         {data &&
           data.map((stream) => (
             <VideoSingle
+              key={stream._id}
               title={stream.channel.status}
               channel={stream.channel.display_name}
               tags={['English']}
@@ -34,8 +40,6 @@ const VideoGroup: React.FC<VideoGroupProps> = ({ data }) => {
               viewers={stream.viewers}
             />
           ))}
-
-        {/* // map this */}
       </div>
     </Container>
   );
