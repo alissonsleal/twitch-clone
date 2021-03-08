@@ -1,0 +1,6 @@
+Sitemap: https://twitch-clone.vercel.app/sitemap
+
+User-agent: *
+Allow: /*
+
+Disallow:

@@ -12,10 +12,6 @@ export const Container = styled.div`
   height: 50px;
   padding: 5px;
   font-size: 14px;
-
-  svg {
-    fill: var(--primary);
-  }
 `;
 
 export const LeftMenu = styled.div`

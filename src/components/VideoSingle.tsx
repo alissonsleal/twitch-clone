@@ -40,7 +40,7 @@ const VideoSingle: React.FC<VideoSingleProps> = ({
           <p>{`${formatNumber(viewers)} viewers`}</p>
         </div>
         <div className="profile-info">
-          <img src={avatar} alt={channel} />
+          <img src={avatar} alt={channel} width="50" height="50" />
           <div>
             <strong title={title}>{title}</strong>
             <p>{channel}</p>
