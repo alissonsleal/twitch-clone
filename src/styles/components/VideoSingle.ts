@@ -19,7 +19,8 @@ export const Container = styled.div`
     strong {
       position: absolute;
       padding: 0.4rem;
-      background-color: #f33;
+      background-color: rgb(233, 25, 22);
+      color: #fff;
       margin: 0.2rem;
       font-size: 13px;
       line-height: 10px;
@@ -87,7 +88,7 @@ export const Container = styled.div`
       p {
         transform: translate(7px, -5px);
       }
-      background-color: #f33;
+      background-color: rgb(233, 25, 22);
     }
   }
 `;

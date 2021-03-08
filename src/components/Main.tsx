@@ -11,7 +11,7 @@ const Main = () => {
   }, []);
   async function getData() {
     const response = await axios.get(
-      `https://api.twitch.tv/kraken/streams?limit=4&offset=${Math.floor(
+      `https://api.twitch.tv/kraken/streams?limit=30&offset=${Math.floor(
         Math.random() * 100,
       )}`,
       {
@@ -22,6 +22,17 @@ const Main = () => {
       },
     );
     setData(response.data.streams);
+  }
+
+  if (!data) {
+    return (
+      <Container>
+        <div className="loading-container">
+          <h1>Twitch Clone</h1>
+          <div className="loading"></div>
+        </div>
+      </Container>
+    );
   }
 
   return (

@@ -1,4 +1,4 @@
-import { FaTwitch, FaSearch } from 'react-icons/fa';
+import { FaSearch } from 'react-icons/fa';
 import { CgCrown } from 'react-icons/cg';
 import { BsPerson } from 'react-icons/bs';
 
@@ -14,7 +14,7 @@ const Header: React.FC = () => {
   return (
     <Container>
       <LeftMenu>
-        <FaTwitch size={32} />
+        <img src="/favicon.svg" alt="Twitch Clone" width="32" height="32" />
         <ul>
           <li>
             <a href="#">Browse</a>
@@ -24,7 +24,10 @@ const Header: React.FC = () => {
       </LeftMenu>
       <MiddleMenu>
         <div>
-          <input type="text" placeholder="Search" />
+          <input id="search" type="text" placeholder="Search" />
+          <label aria-label="search" htmlFor="search">
+            Search
+          </label>
           <FaSearch size={16} />
         </div>
       </MiddleMenu>
