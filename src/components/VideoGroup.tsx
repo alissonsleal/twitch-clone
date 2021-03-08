@@ -20,16 +20,23 @@ export interface DataProps {
   };
 }
 
+function shuffleArray(arr: DataProps[]) {
+  return arr.sort(() => Math.random() - 0.5);
+}
+
 const VideoGroup: React.FC<VideoGroupProps> = ({ data }) => {
   if (!data) {
     return <h1>Loading Twitch Clone...</h1>;
   }
+
+  const shuffledData = shuffleArray(data).slice(0, 4);
+
   return (
     <Container>
       <strong>Recommended channels</strong>
       <div className="videos">
-        {data &&
-          data.map((stream) => (
+        {shuffledData &&
+          shuffledData.map((stream) => (
             <VideoSingle
               key={stream._id}
               title={stream.channel.status}

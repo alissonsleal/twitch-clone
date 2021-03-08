@@ -9,7 +9,7 @@ const spin = keyframes`
 
 export const Container = styled.main`
   margin-top: 50px;
-  max-width: 100vw;
+  max-width: 1366px;
 
   div.loading-container {
     display: flex;
