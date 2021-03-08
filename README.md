@@ -47,6 +47,12 @@ The `<Button buttonType={'primary'|'secondary'}>Text Inside</Button>` component 
   </p>
 <br />
 
+### Lighthouse Performance Score
+
+  <p align="center">
+    <img  max-width="768" src="https://i.imgur.com/0bpjPLk.png">
+  </p>
+
 ## Built With:
 
 - [x] Next.JS
