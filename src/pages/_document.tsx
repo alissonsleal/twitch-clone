@@ -65,6 +65,12 @@ export default class MyDocument extends Document {
             content="https://static-cdn.jtvnw.net/ttv-static-metadata/twitch_logo3.jpg"
           />
           <meta property="url" content="https://twitchclone.vercel.app/" />
+
+          <script
+            defer
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon={`{"token": "${process.env.NEXT_PUBLIC_CLOUDFLARE}", "spa": true}`}
+          ></script>
         </Head>
         <body>
           <Main />
